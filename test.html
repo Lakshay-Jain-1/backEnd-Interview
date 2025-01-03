@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Close Detection Demo</title>
+</head>
+<body>
+    <h1 style="color: green">Tab Close Detection</h1>
+    <b>Try these steps:</b>
+    <ol>
+        <li>Type something in the textarea below</li>
+        <li>Try to close the tab or refresh the page</li>
+        <li>You should see a popup confirmation dialog</li>
+    </ol>
+    <form>
+        <textarea 
+            placeholder="Type something here to enable the popup warning..."
+            style="width: 300px; height: 100px">
+        </textarea>
+    </form>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            // Cancel the event and show confirmation dialog
+            e.preventDefault();
+            // Chrome requires returnValue to be set
+            e.returnValue = 'Are you sure you want to leave?';
+            // Custom message (works in older browsers)
+            return 'Are you sure you want to leave?';
+        });
+    </script>
+</body>
+</html>

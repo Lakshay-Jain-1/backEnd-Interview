@@ -1,0 +1,40 @@
+it is the gist "path end points are updated" 
+// how will solve that user is online or not 
+// when it land on /interview route it will make a post request "/user/isOnline"
+// on interview page there will be dialog box for online users 
+// and get request "/users/online" will display it 
+
+// TODO TASK
+// if i click on a user and then my offer will sent to that user and if offer is not filled then we can make call else we can't make a call , for this need to create a route
+// if that person accept the call then answer will update that sender's schema and 
+// will do short poll that is there any answer in it, if yes then paste the answer vallah you are innnn !!!!!! (need to create a route for this also )
+
+// user 1 and user 2 ke liye both short polling
+// 3 semaphones daal diye to avoid race around condition  onCall , avilable and recievingOffer 
+// schema mein onCall , offer , answer and acceptor (it means other person)  key daalni hain 
+
+
+when we create schema 
+
+
+/*
+Use instance methods (methods) if the behavior depends on a specific document's data.
+// Adding methods to the schema
+UserSchema.methods.findUsersOnline = function (cb) {
+    return mongoose.model('usermodel').find({ online: true }, cb);
+};
+how to run it 
+ const userInstance = await usermodel.findOne();
+
+    // Use the custom method to find all online users
+    userInstance.findUsersOnline((err, onlineUsers) => {
+        if (err) {
+            console.error("Error fetching online users:", err);
+        } else {
+            console.log("Online Users:", onlineUsers);
+        }
+    });
+
+Use static methods (statics) if the behavior applies globally to the model.
+so we will use this basically this is attached to model itself
+*/

@@ -16,7 +16,7 @@ const app: Application = express();
 
 // Middleware setup
 const corsOptions = {
-  origin: ["http://192.168.1.79:5173", "https://ab1c-106-219-164-206.ngrok-free.app" ,"http://localhost:5174","https://ab1c-106-219-164-206.ngrok-free.app/interview"],
+  origin: ["http://192.168.1.79:5173", "https://ab1c-106-219-164-206.ngrok-free.app" ,"http://localhost:5174","https://ab1c-106-219-164-206.ngrok-free.app/interview","https://fd22-106-219-164-206.ngrok-free.app"],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   optionsSuccessStatus: 200,
   credentials:true

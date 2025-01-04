@@ -86,15 +86,17 @@ async function accessAnswer(req: Request, res: Response):Promise<any> {
         const { name } = req.body;
 
         const sender = await usermodel.findOne({ name });
-        if (!sender) {
-            return res.status(404).json({ success: false, message: "Sender not found" });
-        }
+        // if (!sender) {
+        //      res.status(404).json({ success: false, message: "Sender not found" });
+        //      return
+        // }
 
-        if (sender.onCall) {
-            return res.json({ success: false, message: "Sender is already on a call" });
-        }
+        // if (sender.onCall) {
+        //      res.json({ success: false, message: "Sender is already on a call" });
+        //      return
+        // }
 
-        await usermodel.findOneAndUpdate({ name }, { $set: { onCall: true } });
+        // await usermodel.findOneAndUpdate({ name }, { $set: { onCall: true } });
 
         res.json({ success: true, answer: sender.answer });
     } catch (error) {

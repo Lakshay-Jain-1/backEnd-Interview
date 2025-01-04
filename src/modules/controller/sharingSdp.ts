@@ -90,7 +90,7 @@ async function accessAnswer(req: Request, res: Response):Promise<any> {
             return res.status(404).json({ success: false, message: "Sender not found" });
         }
 
-        if (!sender.onCall) {
+        if (sender.onCall) {
             return res.json({ success: false, message: "Sender is already on a call" });
         }
 
